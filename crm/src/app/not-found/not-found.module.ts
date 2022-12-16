@@ -5,7 +5,9 @@ import { NotFoundRoutingModule } from './not-found-routing.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    
+  ],
   imports: [
     CommonModule,
     NotFoundRoutingModule
