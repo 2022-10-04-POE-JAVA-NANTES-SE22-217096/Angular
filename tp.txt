@@ -9,6 +9,7 @@ ng serve -o
 
 
 
+
 TP - 2
 
 Compteur de clique
@@ -17,5 +18,3 @@ Creer un projet : "click-counter"
 Afficher l'etat du compteur, un bouton "+" et un bouton "-"
 Le bouton "+" incrémente le compteur
 Le bouton "-" décrémente le compteur
-
-
