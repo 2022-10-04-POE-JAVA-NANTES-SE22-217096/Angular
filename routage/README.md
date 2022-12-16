@@ -25,3 +25,27 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+
+Creation de 2 modules
+> module-a
+> module-b
+
+Creation de 4 composants
+> module-a > composant-a
+> module-a > composant-b
+> module-b > composant-a
+> module-b > composant-b
+
+Afficher les 4 composants sur app.component.html
+
+
+ng g m module-a
+ng g c module-a/composant-a
+ng g c module-a/composant-b
+ng g m module-b
+ng g c module-b/composant-a
+ng g c module-b/composant-b
