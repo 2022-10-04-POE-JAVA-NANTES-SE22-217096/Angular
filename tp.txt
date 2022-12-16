@@ -18,3 +18,42 @@ Creer un projet : "click-counter"
 Afficher l'etat du compteur, un bouton "+" et un bouton "-"
 Le bouton "+" incrémente le compteur
 Le bouton "-" décrémente le compteur
+
+
+
+
+TP - 3
+
+Création du projet CRM 
+
+Création des modules
+> routage
+> Module Core
+> Module Shared
+> Module Pages + routage
+> Module NotFound + routage
+
+Création des composants
+> Composant "btn" dans le module Shared
+> Composant "notFound" dans le module NotFound
+> Composant "dashboard" dans le module Pages
+> Composant "orders/list" dans le module Pages
+> Composant "orders/add" dans le module Pages
+> Composant "orders/edit" dans le module Pages
+> Composant "components/header" dans le module Core
+> Composant "components/footer" dans le module Core
+> Composant "components/nav" dans le module Core
+
+Creation des routes
+> Route page defaut qui redirige vers le dashboard
+> Route wildcard vers NotFound
+> Route "/dashboard" declenche le composant "dashboard"
+> Route "/orders" declenche le composant "orders/list"
+
+Ajouter un menu dans le composant "components/nav"
+> dashboard
+> orders
+
+
+
+ng g m xxx --routing
