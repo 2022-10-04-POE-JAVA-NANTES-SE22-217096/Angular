@@ -12,6 +12,10 @@ import { BComponent } from './b/b.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    AComponent,
+    BComponent
   ]
 })
 export class TestModule { }

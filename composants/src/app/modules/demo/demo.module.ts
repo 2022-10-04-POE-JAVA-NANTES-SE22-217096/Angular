@@ -15,6 +15,6 @@ import { BComponent } from './b/b.component';
   ],
   exports: [
     AComponent
-  ]
+  ],
 })
 export class DemoModule { }
