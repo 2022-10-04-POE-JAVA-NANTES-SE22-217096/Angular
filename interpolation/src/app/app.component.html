@@ -1,0 +1,27 @@
+<h2>Interpolation de données</h2>
+{{ title }}
+
+<hr>
+
+
+
+<h2>Interpolation de propriétés</h2>
+<img [src]="url">
+<p [innerText]="text"></p>
+
+<hr>
+
+
+
+<h2>Interpolation d'evenements</h2>
+
+<button (click)="sayHello()">Obi Wan say Hello</button>
+
+
+
+<hr>
+
+<h2>Two Way Binding</h2>
+
+<div>Name : {{ firstname }}</div>
+<input type="text" [(ngModel)]="firstname">

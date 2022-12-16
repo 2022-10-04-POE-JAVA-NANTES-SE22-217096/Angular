@@ -1,0 +1,21 @@
+TP - 1
+
+Creer un projet angular : "interpolation"
+demarrer ng serve sur "interpolation"
+
+ng new interpolation 
+cd interpolation
+ng serve -o
+
+
+
+TP - 2
+
+Compteur de clique
+
+Creer un projet : "click-counter"
+Afficher l'etat du compteur, un bouton "+" et un bouton "-"
+Le bouton "+" incrémente le compteur
+Le bouton "-" décrémente le compteur
+
+
