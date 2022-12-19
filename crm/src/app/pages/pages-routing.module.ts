@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListComponent as OrdersListComponent } from './orders/list/list.component';
 
 const routes: Routes = [
-  // Page Dashboard
+  // Dashboard
   {
     path: 'dashboard',
     component: DashboardComponent
   },
 
-  // Page Orders list
+  // Orders List
   {
     path: 'orders',
     component: OrdersListComponent
-  }
+  },
+
+  // Orders Add
+
+  // Orders Edit
 ];
 
 @NgModule({

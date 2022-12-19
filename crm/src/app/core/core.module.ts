@@ -21,6 +21,6 @@ import { PagesRoutingModule } from '../pages/pages-routing.module';
     HeaderComponent,
     FooterComponent,
     NavComponent
-  ]
+  ],
 })
 export class CoreModule { }

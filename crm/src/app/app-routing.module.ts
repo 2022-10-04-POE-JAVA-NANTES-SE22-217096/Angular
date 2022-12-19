@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  // Default page
+  // Default route
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'dashboard'
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
   },
 
-  // Wildcard route
+  // Wildcard Route / Not Found
   {
     path: '**',
-    // component: NotFoundComponent,
-    loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)
+    // Lazy Loading Module route
+    loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundModule )
   }
 ];
 
