@@ -28,8 +28,6 @@ export class BookService {
     },
   ];
 
-  constructor() { }
-
   /**
    * Get Books list
    */

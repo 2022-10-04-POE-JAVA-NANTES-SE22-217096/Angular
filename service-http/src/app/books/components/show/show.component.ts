@@ -24,13 +24,4 @@ export class ShowComponent implements OnInit {
     this.book = this.bookService.getBook( this.id );
   }
 
-
-
-
-
-
-  // Recup ID book
-  // Get book in service
-  // Show book
-
 }
