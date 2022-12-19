@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddComponent } from './add/add.component';
-import { EditComponent } from './edit/edit.component';
-import { ListComponent } from './list/list.component';
-import { ShowComponent } from './show/show.component';
+import { AddComponent } from './components/add/add.component';
+import { EditComponent } from './components/edit/edit.component';
+import { ListComponent } from './components/list/list.component';
+import { ShowComponent } from './components/show/show.component';
 
 // const routes: Routes = [
 //   // Liste des livres

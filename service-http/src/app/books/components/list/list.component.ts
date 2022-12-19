@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BooksInterface } from './../books.interface';
+import { BooksInterface } from '../../interface/books.interface';
 
 @Component({
   selector: 'app-list',
