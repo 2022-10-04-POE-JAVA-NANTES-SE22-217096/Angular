@@ -1,1 +1,10 @@
-<p>Livres list works!</p>
+<h2>{{ pageTitle }}</h2>
+
+<ul>
+    <li *ngFor="let book of books; let i = index">{{ i }} - {{ book.title }}</li>
+</ul>
+
+<hr>
+<ul>
+    <li *ngFor="let item of items; let i = index">{{ i }} - {{ item }}</li>
+</ul>
