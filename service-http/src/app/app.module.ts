@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorsModule } from './authors/authors.module';
 import { BooksModule } from './books/books.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { BooksModule } from './books/books.module';
   imports: [
     BrowserModule,
 
+    HomeModule,
     BooksModule,
     AuthorsModule,
 
