@@ -40,14 +40,12 @@ const routes: Routes = [{
       component: ListComponent
     },
 
-
     // Ajoute un livre (Create)
     // > site.com/livres/add
     {
       path: 'add',
       component: AddComponent
     },
-
 
     {
       path: ':id',
@@ -76,10 +74,6 @@ const routes: Routes = [{
         // }
       ]
     },
-
-
-
-
   ]
 
 }];
