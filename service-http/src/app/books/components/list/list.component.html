@@ -1,5 +1,6 @@
 <h2>{{ pageTitle }}</h2>
 
+<!-- TODO: Affiche un message si aucun livre dans la liste -->
 <ul>
     <li *ngFor="let book of books; let i = index">
         <a [routerLink]="['/livres', book.id]">{{ book.title }}</a>

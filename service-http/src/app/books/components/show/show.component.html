@@ -1,8 +1,8 @@
-<h2>Titre du livre</h2>
+<h2>{{ book?.title }}</h2>
 
-<div>Id: 42</div>
-<div>Price: 42.99</div>
+<div>Id: {{ book?.id }}</div>
+<div>Price: {{ book?.price }}</div>
 
-<div>Description:
-    "description" ou "aucune description"
+<div>Description:<br>
+    {{ book?.description }}
 </div>
