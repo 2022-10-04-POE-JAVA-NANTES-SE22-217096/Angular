@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BookInterface, BooksInterface } from '../interface/books.interface';
 
 import { BehaviorSubject } from 'rxjs'; // TODO: 2.a Import de la classe BehaviorSubject
-import { HttpClient } from '@angular/common/http'; // TODO: 3.a Import de la classe HttpClient
+import { HttpClient, HttpHeaders } from '@angular/common/http'; // TODO: 3.a Import de la classe HttpClient
 
 
 @Injectable({
@@ -53,6 +53,27 @@ export class BookService {
   public get book()
   {
     return this._book;
+  }
+
+
+  // ------ 
+  // ------ Create Book
+  // ------ 
+
+  public createBook(url: string, book: any)
+  {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    const options = {
+      headers
+    };
+
+    // console.log(url, book);
+    this.httpClient.post(url, book, options)
+      .subscribe(response => console.log(response));
+    
   }
 
 

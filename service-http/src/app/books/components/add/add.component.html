@@ -1,0 +1,37 @@
+<h2>Create a new book</h2>
+
+
+<!-- title -->
+<div class="form-group">
+    <label for="title">Book Title</label>
+    <input 
+        type="text" 
+        class="form-control" 
+        id="title" 
+        [formControl]="form.controls.title">
+</div>
+
+<!-- description -->
+<div class="form-group">
+    <label for="description">Book Description</label>
+    <textarea 
+        class="form-control" 
+        id="description"
+        [formControl]="form.controls.description"></textarea>
+</div>
+
+<!-- price -->
+<div class="form-group">
+    <label for="price">Book Price</label>
+    <input 
+        type="text" 
+        class="form-control" 
+        id="price"
+        [formControl]="form.controls.price">
+</div>
+
+
+<!-- submit btn -->
+<button type="button" (click)="submitBook()">Create new book</button>
+
+

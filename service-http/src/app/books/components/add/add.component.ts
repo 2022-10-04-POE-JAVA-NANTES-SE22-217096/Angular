@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { BookService } from '../../service/book.service';
+
+const url = "http://localhost:3000/books";
 
 @Component({
   selector: 'app-add',
@@ -7,4 +11,19 @@ import { Component } from '@angular/core';
 })
 export class AddComponent {
 
+  public form = new FormGroup({
+    title: new FormControl(),
+    description: new FormControl(),
+    price: new FormControl(),
+  });
+
+  constructor(
+    private bookService: BookService
+  ){}
+
+  public submitBook(): void
+  {
+    // console.log( this.form.value );
+    this.bookService.createBook(url, this.form.value);
+  }
 }
