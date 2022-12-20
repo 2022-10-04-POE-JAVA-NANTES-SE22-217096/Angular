@@ -1,13 +1,12 @@
 <h2>{{ pageTitle }}</h2>
 
-<!-- TODO: Affiche un message si aucun livre dans la liste -->
-<ul>
+
+<ul *ngIf="books.length; else noBookMessage">
     <li *ngFor="let book of books; let i = index">
         <a [routerLink]="['/livres', book.id]">{{ book.title }}</a>
     </li>
 </ul>
 
-<hr>
-<ul>
-    <li *ngFor="let item of items; let i = index">{{ i }} - {{ item }}</li>
-</ul>
+<ng-template #noBookMessage>
+    <div>Aucun livre en BDD</div>
+</ng-template>

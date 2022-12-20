@@ -5,36 +5,19 @@ import { EditComponent } from './components/edit/edit.component';
 import { ListComponent } from './components/list/list.component';
 import { ShowComponent } from './components/show/show.component';
 
-// const routes: Routes = [
-//   // Liste des livres
-//   // > site.com/livres
-//   {
-//     path: 'livres',
-//     component: ListComponent
-//   },
-
-//   // Affiche un livre
-//   // > site.com/livres/42
-//   // > site.com#page=livres&id=42
-//   {
-//     path: 'livres/:id',
-//     component: ShowComponent
-//   }
-
-// ];
-
-
 const routes: Routes = [{
 
+  // > site.com/livres
   // > site.com/livres/add
   // > site.com/livres/42
-  // > site.com/livres
-  // > site.com/livres/edit/42
+
+  // > site.com/livres/42/edit
+  // > site.com/livres/42/delete
   path: 'livres',
   children: [
 
     // Liste des livres (Index)
-    // > site.com/livres
+    // > site.com/livres/
     {
       path: '',
       component: ListComponent
@@ -50,6 +33,7 @@ const routes: Routes = [{
     {
       path: ':id',
       // component: ShowComponent
+      // > site.com/livres/42
       children: [
 
         // Affiche un livre (Read)

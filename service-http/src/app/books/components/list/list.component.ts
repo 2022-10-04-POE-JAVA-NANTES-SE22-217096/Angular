@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BooksInterface } from '../../interface/books.interface';
 import { BookService } from '../../service/book.service';
 
+const url = "http://localhost:3000/books";
 
 @Component({
   selector: 'app-list',
@@ -11,26 +11,20 @@ import { BookService } from '../../service/book.service';
 export class ListComponent implements OnInit {
 
   public pageTitle:string = "Liste des livres";
-
-  public books: BooksInterface = [];
-
-
-  items: any[] = [
-    "string",
-    true,
-    42,
-    {},
-    []
-  ];
-
+  public books: any[] = [];
 
   constructor(
-    private bookService: BookService
-  ){}
+    private bookService: BookService,
+  ){
+    // TODO: 4. Requete HTTP - Methode 1
+    // this.bookService.getBooksFromDatabase(url);
+  }
 
   ngOnInit(): void
   {
-    this.books = this.bookService.books;
+    // TODO: 4. Requete HTTP - Methode 1
+    this.bookService.getBooksFromDatabase(url);
+    this.bookService.books.subscribe(data => this.books = data);
   }
 
 }

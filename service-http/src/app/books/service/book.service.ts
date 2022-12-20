@@ -1,62 +1,57 @@
 import { Injectable } from '@angular/core';
 import { BookInterface, BooksInterface } from '../interface/books.interface';
 
+import { BehaviorSubject } from 'rxjs'; // TODO: 2.a Import de la classe BehaviorSubject
+import { HttpClient } from '@angular/common/http'; // TODO: 3.a Import de la classe HttpClient
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
 
-  // books: Book[] = [
-  // books: Array<Book> = [
-  private _books: BooksInterface = [
-    {
-      id: 1,
-      title: "Super livre 1",
-      price: 9.99,
-      authors : []
-    },
-    {
-      id: 2,
-      title: "Comment survivre à une invasion zombie",
-      price: 9.99,
-      description: "Lorem ipsum dolor sit blablabla..."
-    },
-    {
-      id: 3,
-      title: "Comment faire pousser des patates sur Mars",
-      price: 9.99
-    },
-  ];
+  // private _books: BooksInterface = [];
+  // TODO: 2.b. Creation de la propriété Observable
+  private _books = new BehaviorSubject<any>([]);
+  private _book = new BehaviorSubject<any>({});
+
+
+  constructor(
+    private httpClient: HttpClient // TODO: 3.b Instance de la classe HttpClient
+  ){
+    // TODO: 4. Requete HTTP - Methode 3
+    // this.httpClient.get("http://localhost:3000/books").subscribe(response => this._books.next(response));
+  }
+
+
+  public getBooksFromDatabase(url: string): void
+  {
+    // this.httpClient.get(url).subscribe(response => this._books = response)
+    this.httpClient.get(url).subscribe(response => this._books.next(response));
+  }
+
 
   /**
    * Get Books list
    */
-  public get books(): BooksInterface
+  public get books()
   {
     return this._books;
   }
 
-  /**
-   * Set Books list
-   */
-  public set books(books: BooksInterface)
-  {
-    this._books = books;
-  }
+
 
   /**
    * Get a specific book by ID
    */
-  public getBook(id: number): BookInterface | undefined
+  public getBook(url: string, id: number)
   {
-    for (let book of this._books)
-    {
-      if (book.id === id)
-      {
-        return book;
-      }
-    }
+    url = `${url}/${id}`;
+    this.httpClient.get(url).subscribe(response => this.book.next(response))
+  }
 
-    return undefined;
+  public get book()
+  {
+    return this._book;
   }
 }
