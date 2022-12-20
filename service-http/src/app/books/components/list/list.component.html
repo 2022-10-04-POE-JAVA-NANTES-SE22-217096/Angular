@@ -1,5 +1,7 @@
 <h2>{{ pageTitle }}</h2>
 
+<a routerLink="/livres/add">Create new book</a>
+
 
 <ul *ngIf="books.length; else noBookMessage">
     <li *ngFor="let book of books; let i = index">

@@ -15,7 +15,6 @@ export class BookService {
   private _books = new BehaviorSubject<any>([]);
   private _book = new BehaviorSubject<any>({});
 
-
   constructor(
     private httpClient: HttpClient // TODO: 3.b Instance de la classe HttpClient
   ){
@@ -24,26 +23,27 @@ export class BookService {
   }
 
 
+
+  // ------ 
+  // ------ All Books
+  // ------ 
+
   public getBooksFromDatabase(url: string): void
   {
     // this.httpClient.get(url).subscribe(response => this._books = response)
     this.httpClient.get(url).subscribe(response => this._books.next(response));
   }
 
-
-  /**
-   * Get Books list
-   */
   public get books()
   {
     return this._books;
   }
 
 
+  // ------ 
+  // ------ One Book (by id)
+  // ------ 
 
-  /**
-   * Get a specific book by ID
-   */
   public getBook(url: string, id: number)
   {
     url = `${url}/${id}`;
@@ -54,4 +54,6 @@ export class BookService {
   {
     return this._book;
   }
+
+
 }
