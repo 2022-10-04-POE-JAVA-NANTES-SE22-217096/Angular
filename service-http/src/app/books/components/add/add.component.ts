@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { BookService } from '../../service/book.service';
 
 const url = "http://localhost:3000/books";
@@ -18,7 +19,8 @@ export class AddComponent {
   });
 
   constructor(
-    private bookService: BookService
+    private bookService: BookService,
+    private router: Router
   ){}
 
   public submitBook(): void

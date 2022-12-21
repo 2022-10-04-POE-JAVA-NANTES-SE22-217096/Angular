@@ -1,1 +1,39 @@
-<p>edit works!</p>
+<h2>Edit a book</h2>
+
+<!-- form [formGroup]="myForm" novalidate (ngSubmit)="submitBook(myForm.value, myForm.valid)" -->
+<form [formGroup]="form" novalidate>
+
+<!-- title -->
+<div class="form-group">
+    <label for="title">Book Title</label>
+    <input 
+        type="text" 
+        class="form-control" 
+        id="title" 
+        formControlName="title">
+</div>
+
+<!-- description -->
+<div class="form-group">
+    <label for="description">Book Description</label>
+    <textarea 
+        class="form-control" 
+        id="description"
+        formControlName="description"></textarea>
+</div>
+
+<!-- price -->
+<div class="form-group">
+    <label for="price">Book Price</label>
+    <input 
+        type="text" 
+        class="form-control" 
+        id="price"
+        formControlName="price">
+</div>
+
+
+<!-- submit btn -->
+<button type="button" (click)="submitBook()">Create new book</button>
+
+</form>

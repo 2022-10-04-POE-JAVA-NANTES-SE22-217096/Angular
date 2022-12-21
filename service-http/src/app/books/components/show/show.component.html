@@ -6,3 +6,6 @@
 <div>Description:<br>
     {{ book?.description }}
 </div>
+
+<a [routerLink]="['/livres', book.id, 'edit']">edit this book ?</a><br>
+<a [routerLink]="['/livres', book.id, 'delete']">delete this book ?</a>

@@ -77,4 +77,39 @@ export class BookService {
   }
 
 
+  public editBook(url: string, id: number|undefined, book: any): void 
+  {
+    url = `${url}/${id}`;
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+
+    const options = {
+      headers
+    };
+
+    // console.log(url, book);
+    this.httpClient.patch(url, book, options)
+      .subscribe(response => console.log(response));
+  }
+
+
+  public deleteBook(url: string, id: number|undefined): void 
+  {
+    url = `${url}/${id}`;
+
+    // const headers = new HttpHeaders({
+    //   'Content-Type': 'application/json',
+    // });
+
+    // const options = {
+    //   headers
+    // };
+
+    // console.log(url, book);
+    // this.httpClient.delete(url, options)
+    this.httpClient.delete(url)
+      .subscribe(response => console.log(response));
+  }
 }
